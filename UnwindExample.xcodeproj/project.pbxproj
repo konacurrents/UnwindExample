@@ -11,7 +11,6 @@
 		D22673BE25E2F794008DAB1B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D22673BD25E2F794008DAB1B /* SceneDelegate.m */; };
 		D22673C125E2F794008DAB1B /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22673C025E2F794008DAB1B /* StartViewController.m */; };
 		D22673C425E2F794008DAB1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22673C225E2F794008DAB1B /* Main.storyboard */; };
-		D22673C625E2F7A4008DAB1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D22673C525E2F7A4008DAB1B /* Assets.xcassets */; };
 		D22673C925E2F7A4008DAB1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22673C725E2F7A4008DAB1B /* LaunchScreen.storyboard */; };
 		D22673CC25E2F7A5008DAB1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D22673CB25E2F7A5008DAB1B /* main.m */; };
 		D22673D525E2F81F008DAB1B /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22673D425E2F81F008DAB1B /* HelpViewController.m */; };
@@ -24,6 +23,7 @@
 		D22673F325E34675008DAB1B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D22673F225E34675008DAB1B /* README.md */; };
 		D22673FE25E384A3008DAB1B /* AmberKShark.png in Resources */ = {isa = PBXBuildFile; fileRef = D22673FD25E384A2008DAB1B /* AmberKShark.png */; };
 		D226740325E389D9008DAB1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D226740225E389D9008DAB1B /* Assets.xcassets */; };
+		D226747225E38B55008DAB1B /* Unwind.png in Resources */ = {isa = PBXBuildFile; fileRef = D226743225E38B51008DAB1B /* Unwind.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,6 @@
 		D22673BF25E2F794008DAB1B /* StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
 		D22673C025E2F794008DAB1B /* StartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 		D22673C325E2F794008DAB1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D22673C525E2F7A4008DAB1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D22673C825E2F7A4008DAB1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D22673CA25E2F7A5008DAB1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D22673CB25E2F7A5008DAB1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -55,6 +54,7 @@
 		D22673F225E34675008DAB1B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D22673FD25E384A2008DAB1B /* AmberKShark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AmberKShark.png; sourceTree = "<group>"; };
 		D226740225E389D9008DAB1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D226743225E38B51008DAB1B /* Unwind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Unwind.png; path = Assets.xcassets/AppIcon.appiconset/Unwind.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +105,8 @@
 				D22673C225E2F794008DAB1B /* Main.storyboard */,
 				D22673E325E3144F008DAB1B /* UnusedViewController.h */,
 				D22673E425E3144F008DAB1B /* UnusedViewController.m */,
-				D22673C525E2F7A4008DAB1B /* Assets.xcassets */,
 				D226740225E389D9008DAB1B /* Assets.xcassets */,
+				D226743225E38B51008DAB1B /* Unwind.png */,
 				D22673C725E2F7A4008DAB1B /* LaunchScreen.storyboard */,
 				D22673CA25E2F7A5008DAB1B /* Info.plist */,
 				D22673CB25E2F7A5008DAB1B /* main.m */,
@@ -177,9 +177,9 @@
 				D22673C925E2F7A4008DAB1B /* LaunchScreen.storyboard in Resources */,
 				D22673F025E3455B008DAB1B /* SegueDiagram.png in Resources */,
 				D22673F325E34675008DAB1B /* README.md in Resources */,
+				D226747225E38B55008DAB1B /* Unwind.png in Resources */,
 				D22673FE25E384A3008DAB1B /* AmberKShark.png in Resources */,
 				D226740325E389D9008DAB1B /* Assets.xcassets in Resources */,
-				D22673C625E2F7A4008DAB1B /* Assets.xcassets in Resources */,
 				D22673C425E2F794008DAB1B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
