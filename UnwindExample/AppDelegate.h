@@ -9,6 +9,10 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+//!dynamically specify which unwind to use.. 
+@property (strong, nonatomic) NSString * unwindIdentityName;
 
+//! returns AppDelegate singleton
++(AppDelegate*)getAppDelegate;
 @end
 

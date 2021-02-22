@@ -11,9 +11,28 @@
 @interface StartViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *unwindDynamicNameTextField;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *dynamicUnwindNameSwitch;
 @end
 
 @implementation StartViewController
+-(void) setUnwindTextField:(NSString*)unwindName
+{
+    [_unwindDynamicNameTextField setText:unwindName];
+    [[AppDelegate getAppDelegate] setUnwindIdentityName:unwindName];
+}
+- (IBAction)dynamicUnwindNameSwitchTouched:(id)sender {
+    switch ([_dynamicUnwindNameSwitch selectedSegmentIndex])
+    {
+        case 0: //
+            [self setUnwindTextField:@"unwindHome"];
+            break;
+        case 1:
+        default:
+            [self setUnwindTextField:@"unwindFromHelpViewController"];
+
+            
+    }
+}
 
 
 - (void)viewDidLoad {
@@ -29,7 +48,14 @@
 {
     UIViewController *destVC = unwindSegue.destinationViewController;
     UIViewController *sourceVC = unwindSegue.sourceViewController;
-    NSLog(@"Unwinding unwindFromHelpViewController %@, %@, %@", unwindSegue, destVC, sourceVC);
+    NSLog(@"Start:Unwinding unwindFromHelpViewController %@, %@, %@", unwindSegue, destVC, sourceVC);
 }
 
+//!define the unwindFromHelp - called "unwindHome"
+- (IBAction) unwindHome:(UIStoryboardSegue*)unwindSegue
+{
+    UIViewController *destVC = unwindSegue.destinationViewController;
+    UIViewController *sourceVC = unwindSegue.sourceViewController;
+    NSLog(@"Sart:Unwinding unwindHome %@, %@, %@", unwindSegue, destVC, sourceVC);
+}
 @end

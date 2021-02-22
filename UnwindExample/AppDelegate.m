@@ -37,4 +37,24 @@
 }
 
 
+//! returns AppDelegate singleton 4.19.2020
++(AppDelegate*)getAppDelegate;
+{
+    //    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    //    return appDelegate;
+    __block AppDelegate *appDelegate;
+    
+    //AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    if ([[NSThread currentThread] isMainThread])
+    {
+        appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];    }
+    else
+    {
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];        });
+    }
+    return appDelegate;
+    
+}
+
 @end
