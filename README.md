@@ -25,6 +25,7 @@ This test shows this as getting to HelpViewController and then unwinding, will p
 
 #### Proudly powering apps by
 ![KShark](AmberKShark.png)
+[KnowledgeShark.me](https://knowledgeshark.me)
 
 ## Features
 * Tests various ways of getting to the HelpViewController, and unwinding
@@ -63,5 +64,6 @@ Unfortunately calling the code with a constant, like unwindHome, still crashes:
 'NSInvalidArgumentException', reason: 'Receiver (<HelpViewController: 0x7ff34671ed10>) has no segue with identifier 'unwindHome''
 ```
 
-NOTE: the Storyboard Unwind Segue must be created in the Storyboard tool. So it needs an Action, which is why the unused placeholde is valuable.
+NOTE: the Storyboard Unwind Segue must be created in the Storyboard tool. So it needs an Action, which is why the unused placeholde is valuable. You must also add an SegueIdentifier so it can be retrieved in the "performSegueWithIdentifier' call.
+
 Also: the segue must have an Identifier (like unwindHome) and an action (like unwindHome:) otherwise the dynamic version, where performSegueWithIdentifier is used, won't work (as there is no identifier matching).
