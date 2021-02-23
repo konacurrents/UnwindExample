@@ -13,7 +13,7 @@ manually connected to via the storyboard exit method. In this example two method
 
 The reason there needs to be an unwind that isn't in the normal path is this will be provided by the new program reusing all this code. Thus the 'unwindHome' could be that method that isn't called in the example, but when a user created a 'home' they implement 'unwindHome' and when the "HelpViewController" is eventually called, the exit to 'unwindHome' would go to this new code; implementing the concepts of delegation through an interesting method.
 
-The key to this is insight gained by the post: <a href="https://stackoverflow.com/questions/12561735/what-are-unwind-segues-for-and-how-do-you-use-them">Unwind Segues</a>
+The key to this is insight gained by the post: [unwind segue](https://stackoverflow.com/questions/12561735/what-are-unwind-segues-for-and-how-do-you-use-them) and my query: [unwind](https://stackoverflow.com/questions/66286521/unwinding-a-segue-to-a-programmatically-specified-unwindsegue-without-storyboar)
 
 In particular, the concept that the unwind methods are to define where they come from (eg. HelpViewController) not where they are going to. Thus HelpViewController only knows of a segue called 'unwindHome - but doesn't know the implementor yet. But the storyboard has an UISegue defined for this entry.
 

@@ -25,6 +25,7 @@
     NSString *label = [NSString stringWithFormat:@"Dynamic Unwind: %@", segueID];
     [_segueDynamicLabel setTitle:label forState:UIControlStateNormal];
     
+    //change the text on the window
     [self.textView setText:@""];
 
 }
