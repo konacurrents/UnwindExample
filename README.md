@@ -22,23 +22,27 @@ When view controllers are pushed on the navigation stack (or equilivent), the ru
 This test shows this as getting to HelpViewController and then unwinding, will perform different amounts of unwinding depending on how it got there.
 
 
-
-#### Proudly powering apps by
-![KShark](AmberKShark.png)
-[KnowledgeShark.me](https://knowledgeshark.me)
-
 ## Features
-* Tests various ways of getting to the HelpViewController, and unwinding
+* Tests various paths/ways of getting to the HelpViewController, and unwinding to different unwind methods depending on the path and what is desired (eg. unwindHome or unwindHelpViewController.
 
 ## System Requirements
 iOS 8.0 or above
 
 ## Installation
 
+The steps describe elsewhere show how to make connection from a button to an 'exit' - and it pics a method that was defined somewhere in the project. In the example below, 'unwindHome' is one of those. 
+
+Note that if the call is made totally from the storyboard, then the identifier doesn't have to be explicitly defined.
+
+But if an in-line code version is to be used, the identifier of the segue must be defined.
+![SegueIDConnect](SegueIDConnect.png)
+And the unwind segue identifier must be defined.
+![SegueIdentifier](SegueID.png)
 
 #### Objective-C
-```objc
 
+
+```objc
 //!define the unwindFromHelp - called "unwindHome"
 - (IBAction) unwindHome:(UIStoryboardSegue*)unwindSegue
 {
@@ -46,19 +50,26 @@ iOS 8.0 or above
     UIViewController *sourceVC = unwindSegue.sourceViewController;
     NSLog(@"Sart:Unwinding unwindHome %@, %@, %@", unwindSegue, destVC, sourceVC);
 }
+```
 
 
-//!still unwinds to "unwindFromHelpViewController"
+In order for a code version to work, the identifier must be defined, and it's this identifier (not the method name) that is used. So even if 'unwindHome:' was the method connected via the xcode tool, an identifier (like 'unwindHome') must be defined.
+
+
+```objc
+//!unwind to a known identifire of a segue
 - (IBAction)unwindInCodeCalled:(id)sender {
 
-   //one or the other:
-   // [self performSegueWithIdentifier:@"unwindFromHelpViewController" sender:self];
-    [self performSegueWithIdentifier:@"unwindHome" sender:self];
+   // maybe decide which one to call by a state variable
+   if (callUnwind)
+      [self performSegueWithIdentifier:@"unwindHome" sender:self];
+   else
+      [self performSegueWithIdentifier:@"unwindFromHelpViewController" sender:self];
 
 }
 ```
 
-Unfortunately calling the code with a constant, like unwindHome, still crashes:
+Unfortunately calling the code with a constant, like unwindHome, still crashes if the identifer wasn't defined.
 
 ```objc
 'NSInvalidArgumentException', reason: 'Receiver (<HelpViewController: 0x7ff34671ed10>) has no segue with identifier 'unwindHome''
@@ -67,3 +78,8 @@ Unfortunately calling the code with a constant, like unwindHome, still crashes:
 NOTE: the Storyboard Unwind Segue must be created in the Storyboard tool. So it needs an Action, which is why the unused placeholde is valuable. You must also add an SegueIdentifier so it can be retrieved in the "performSegueWithIdentifier' call.
 
 Also: the segue must have an Identifier (like unwindHome) and an action (like unwindHome:) otherwise the dynamic version, where performSegueWithIdentifier is used, won't work (as there is no identifier matching).
+
+#### Proudly powering apps by
+![KShark](AmberKShark.png)
+[KnowledgeShark.me](https://knowledgeshark.me)
+

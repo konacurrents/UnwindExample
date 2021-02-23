@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D21DA3B125E5A99100DF5B96 /* SegueID.png in Resources */ = {isa = PBXBuildFile; fileRef = D21DA3B025E5A99100DF5B96 /* SegueID.png */; };
+		D21DA3B425E5AA4E00DF5B96 /* SegueIDConnect.png in Resources */ = {isa = PBXBuildFile; fileRef = D21DA3B325E5AA4D00DF5B96 /* SegueIDConnect.png */; };
 		D22673BB25E2F794008DAB1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D22673BA25E2F794008DAB1B /* AppDelegate.m */; };
 		D22673BE25E2F794008DAB1B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D22673BD25E2F794008DAB1B /* SceneDelegate.m */; };
 		D22673C125E2F794008DAB1B /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22673C025E2F794008DAB1B /* StartViewController.m */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D21DA3B025E5A99100DF5B96 /* SegueID.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SegueID.png; sourceTree = "<group>"; };
+		D21DA3B325E5AA4D00DF5B96 /* SegueIDConnect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SegueIDConnect.png; sourceTree = "<group>"; };
 		D22673B625E2F793008DAB1B /* UnwindExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnwindExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D22673B925E2F794008DAB1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D22673BA25E2F794008DAB1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 		D22673AD25E2F792008DAB1B = {
 			isa = PBXGroup;
 			children = (
+				D21DA3B325E5AA4D00DF5B96 /* SegueIDConnect.png */,
+				D21DA3B025E5A99100DF5B96 /* SegueID.png */,
 				D22673FD25E384A2008DAB1B /* AmberKShark.png */,
 				D22673F225E34675008DAB1B /* README.md */,
 				D22673B825E2F794008DAB1B /* UnwindExample */,
@@ -178,7 +184,9 @@
 				D22673F025E3455B008DAB1B /* SegueDiagram.png in Resources */,
 				D22673F325E34675008DAB1B /* README.md in Resources */,
 				D226747225E38B55008DAB1B /* Unwind.png in Resources */,
+				D21DA3B125E5A99100DF5B96 /* SegueID.png in Resources */,
 				D22673FE25E384A3008DAB1B /* AmberKShark.png in Resources */,
+				D21DA3B425E5AA4E00DF5B96 /* SegueIDConnect.png in Resources */,
 				D226740325E389D9008DAB1B /* Assets.xcassets in Resources */,
 				D22673C425E2F794008DAB1B /* Main.storyboard in Resources */,
 			);
