@@ -23,7 +23,7 @@ This test shows this as getting to HelpViewController and then unwinding, will p
 
 
 ## Features
-* Tests various paths/ways of getting to the HelpViewController, and unwinding to different unwind methods depending on the path and what is desired (eg. unwindHome or unwindHelpViewController.
+* Tests various paths/ways of getting to the HelpViewController, and unwinding to different unwind methods depending on the path and what is desired (eg. unwindHome or unwindFromHelpViewController.
 
 ## System Requirements
 iOS 8.0 or above
